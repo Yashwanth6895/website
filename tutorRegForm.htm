@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tutor Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <!-- This below to lines lines is not working  -->
+    <!-- <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.7/jquery.min.js"></script> -->
+  
+    <link rel="stylesheet" href="customCSS/custom.css">
+</head>
+
+
+   <style rel= "stylesheet" href="custom.css"></style>
+<script>
+    function amount() {
+        var x = document.getElementById("amt").value;
+        document.getElementById("amnt").innerHTML = x + "Rs";
+    }
+
+</script>
+<body>
+<!-- <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">WITUTOR</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="tutorRegForm.html">Become a Tutor</a></li>
+            <li><a href="../studentRegForm.html">I'm a Student</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="../LoginForm.html" class="pull-right">Login</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+<div class="form-group" style="background-color:rgba(10,10,10,.4);background-size:cover">
+    <form name="treg" action="tregister" method="post" style="text-align: center">
+        <h2  style="text-align:center; color: whitesmoke">Tutor Registration Form</h2>
+
+        <div class="container">
+            <div class="col-md-4 col-lg-4 col-xs-12 col-md-offset-3">
+
+                <label>Username<sup style="color: red">*</sup></label><input type="text" name="user" class="form-control"  placeholder="Enter username"
+                                                                             required><br>
+                <label>Email<sup style="color: red">*</sup></label><input type="email" name="email" class="form-control" id="email"
+                                                                          placeholder="Enter your Email address" required><br>
+                <label>Password<sup style="color: red">*</sup></label><input type="password" name="password" class="form-control" id="pass" placeholder="Enter password"
+                                                                             required><br>
+                <label>Contact<sup style="color: red">*</sup></label><input type="number" name="contact" class="form-control" placeholder="Enter your WhatsApp contact " required><br>
+
+                <label>Experience<sup style="color: red">*</sup></label><input type="number" name="experience" class="form-control" placeholder="Experience in months " required><br>
+                
+                <label>Current occupation<sup style="color: red">*</sup></label><input type="text" name="currentoccuption" class="form-control" placeholder="Enter current occupation" required>
+                </br>
+                
+                <label>Gender<sup style="color: red">*</sup></label>
+                <input type="radio" name="gender" value="Male" checked><label>Male</label>
+                <input type="radio"  name="gender" value="Female"><label>Female</label></br>
+                
+                
+                <label>Board<sup style="color: red">*</sup></label>
+                <input type="radio" name="board" value="State Board" checked><label>State Board</label>
+                <input type="radio"  name="board" value="ICSE"><label>ICSE</label>
+                <input type="radio"  name="board" value="CBSE"><label>CBSE</label></br>
+                
+                <label>Preffered class<sup style="color: red">*</sup></label>
+                <select name="prefferedclass" required>
+                    <option disabled selected>None</option>
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="3rd">3rd</option>
+                    <option value="4th">4th</option>
+                    <option value="5th">5th</option>
+                    <option value="6th">6th</option>
+                    <option value="7th">7th</option>
+                    <option  value="8th">8th</option>
+                    <option value="9th">9th</option>
+                    <option value="10th">10th</option>
+                    <option value="11th">11th</option>
+                    <option value="12th">12th</option>
+                    <option value="DegreeLevel">Degree level</option>
+                </select><br>
+
+
+                <label>Preffered subject<sup style="color: red">*</sup></label><input type="text" name="prefferedsubject" class="form-control" placeholder="Enter subjects you handling?"
+                                                                            required></br>
+
+                <label>Preffered location to teach<sup style="color: red">*</sup></label><input type="text"  name="prefferedlocation" class="form-control" placeholder="Enter area name"
+                                                                                      required></br>
+
+                <label>Amount you wish to charge per subject from 1000RS to 2000Rs<sup style="color: red">*</sup></label><br>
+                <input class="form-control" name="tamnt" type="range" min="1500" max="20000" value="200" onmousemove="amount()" id="amt">
+
+                <label>Selected amount</label>
+                <div  name="tselamnt"   style="color:red" id="amnt">0Rs</div>
+                
+                <label>Qualification<sup style="color: red">*</sup></label><input type="text" name="tqualification" class="form-control" placeholder="Enter qualification" required>
+                <br>
+                
+                <input type="checkbox" name="tnc" required>I agree to the
+                <u> <a href="TandC.html">Terms and conditions.</a></u>
+                <br>
+                <button  name='tsubmit'  class="btn-success btn-md col-lg-offset-4" type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
